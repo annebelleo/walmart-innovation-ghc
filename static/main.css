@@ -1,0 +1,16 @@
+/* #main-title {
+    font-size: 500%
+    padding: 10px;
+} */
+
+.card-img {
+    margin: auto;
+    width: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.card {
+    padding-left: 10%;
+    padding-right: 10%;
+}

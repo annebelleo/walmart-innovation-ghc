@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link type="text/css" href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+
+  <title>History - Walmart | Hole in the Wall</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('home')}}">Hole in the Wall</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={{url_for('history')}}>History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <header>
+      <h1 class="title" align='center'>History</h1>
+    </header>
+    <div class="card">
+      <p class="card-body">What is the <a href="https://en.wikipedia.org/wiki/Reverse_vending_machine">reverse vending machine?</a></p>
+      <p class="card-body">In 1920, Elmer M. Jones and Vance Sue Walker filed <a href="https://patents.google.com/patent/US1560242A/en">US Patent 1560242</a> for the first vending machine with a coin return mechanism. Since then, <a
+          href="https://patents.justia.com/patent/4510857">six other patents</a> have been filed that make up the current empty bottle dispenser distributing refunds.</p>
+      <p class="card-body">Depending on state and federal laws, customers can bring recyclable plastics that have a recycle symbol, such as the ones below, to a reverse vending machine that assigns a value corresponding to the refund value of that
+        type of material.</p>
+      <!-- https://www.calrecycle.ca.gov/BevContainer/Consumers/CashingIn  -->
+      <img class="card-img" src="https://cdn2.vectorstock.com/i/1000x1000/70/06/set-recycling-symbols-for-plastic-vector-18527006.jpg">
+      <p class="card-body">The use of these machines for recycling materials have since then been widespread, ranging from recycling centers in the US to grocery stores in several countries in Europe. For example, the Netherlands-based grocery store
+        <a href="https://www.ah-boodschappen.nl/klantenservice">Albert Heijn</a> implemented its take on the reverse vending machine in nearly each of its 800 stores, with customers exchanging their recyclables in exchange for store credit. Plastics
+        as well as batteries and broken lightbulbs can be recycled in these machines. You can even dispense a beer crate!</p>
+      <img class="card-img" src="https://bitterballenbruid.files.wordpress.com/2015/10/statiegeld.jpg">
+      <p class="card-body"></p>
+    </div>
+  </div>
+
+
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
