@@ -11,36 +11,21 @@ var y;
 var bottleX = 100;
 var bottleY = 400;
 
-let dragState = false;
+var dispenserX = 500;
+var dispenserY = 300;
 
 function preload() {
   waterBottleImg = loadImage("static/water-bottle.jpeg");
 }
 
-function mousePressed() {
-  let d = dist(x, y, mouseX, mouseY);
-  if (d <= ballSize / 2) {
-    dragState = true;
-
-  }
-
-function mouseDragged() {
-  if ((mouseX > bottleX - 50) && (mouseX < bottleX + 50)) {
-    if ((mouseY > bottleY - 50) && (mouseY < bottleY + 50)) {
-      bottleX = mouseX;
-      bottleY = mouseY
-    }
-  }
-}
-
 function setup() {
   var canvasDiv = document.getElementById('p5Canvas')
-  var width = canvasDiv.offsetWidth - 50;
+  var width = canvasDiv.offsetWidth;
   var height = canvasDiv.offsetHeight;
-  console.log(width);
-  console.log(height);
-  var myCanvas = createCanvas(width, height);
-  myCanvas.parent(canvasDiv);
+  // var myCanvas = createCanvas(width, height);
+  let renderer = createCanvas(width, height);
+  // myCanvas.parent(canvasDiv);
+  renderer.parent(canvasDiv);
 
 }
 
@@ -49,7 +34,7 @@ function draw() {
 
   let blue = color(255, 204, 0);
   fill(blue);
-  machine = rect(400, 100, 200, 400, 10); // x-axis, y-axis, width, height, border-radius
+  machine = rect(500, 0, 200, 300, 10); // x-axis, y-axis, width, height, border-radius
   let white = color(255,255,255)
   fill(white);
   theScreen = rect(425, 150, 150, 100, 10)
@@ -58,14 +43,19 @@ function draw() {
   receipt = rect(520, 350, 50, 10)
   let yellow = color(100, 100, 100)
   fill(yellow);
-  dispenser = ellipse(500, 300, 50); // x, y, diameter
+  dispenser = ellipse(dispenserX, dispenserY, 50); // x, y, diameter
   dispenser.shapeColor = 'white';
 
   machine.immovable = true;
   dispenser.immovable = true;
 
-  waterBottle = createSprite(100, 400, 1, 1);
+  waterBottle = createSprite(bottleX, bottleY, 1, 1);
   waterBottle.addImage(waterBottleImg);
+
+  if (dist(bottleX, bottleY, mouseX, mouseY) < 50 && mouseIsPressed) { // waterBottle
+    waterBottle.remove(waterBottleImg)
+    screenBottle = text("10c", 425,150,10,10)
+  }
 
   drawSprites();
 }
