@@ -76,7 +76,8 @@ function draw() {
   if (waterBottle1.position.x == dispenserX+1) {
     waterBottle1.remove();
     waterBottle2.remove()
-    text("Bottle value:", 545, 145)
+    fill(black)
+    text("Value:", 560, 145)
     text("$0.10", 560, 160)
   }
 
@@ -85,9 +86,10 @@ function draw() {
     waterBottle4.remove();
     fill(white);
     rect(575, 310, 50, 50)
-    fill(black);
-    text("receipt", 583, 335)
+    fill(black)
+    text("Total:", 585, 335)
     text("$0.20", 585, 350)
+    text("Thank you!", 548, 190)
     noLoop();
   }
 
