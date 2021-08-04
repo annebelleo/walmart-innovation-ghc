@@ -23,6 +23,10 @@ body {
   /* margin: 10px; */
 }
 
+#aboutsection {
+  background-color: #f5f5f5;
+}
+
 #headerrow {
   margin: 30px;
 }
@@ -37,6 +41,11 @@ body {
   font-size: 2rem;
   color: #fff;
   border-radius: .75rem;
+}
+
+.accordion {
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 svg {
@@ -62,6 +71,10 @@ svg {
   padding-left: 10%;
   padding-right: 10%;
   border: none;
+}
+
+.card-body {
+  padding: 1rem 0 0 0;
 }
 
 .flex-fill {

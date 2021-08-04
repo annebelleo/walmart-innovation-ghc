@@ -11,11 +11,5 @@ def home():
     """
     return render_template("home.html")
 
-
-@app.route("/history/")
-def history():
-    return render_template("history.html")
-
-
 if __name__ == "__main__":
     app.run(host='localhost', debug=True)
