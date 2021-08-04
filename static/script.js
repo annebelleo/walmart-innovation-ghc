@@ -27,9 +27,6 @@ function preload() {
 function setup() {
   var canvasDiv = document.getElementById('p5Canvas')
   var width = canvasDiv.offsetWidth;
-  console.log(canvasDiv.offsetWidth)
-  console.log(canvasDiv.style.width)
-  console.log(width)
   var height = canvasDiv.offsetHeight;
   // console.log(canvasDiv.offsetHeight)
   // console.log(height)
