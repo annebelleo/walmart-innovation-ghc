@@ -8,14 +8,20 @@ var waterBottleImg;
 var x;
 var y;
 
-var bottleX = 100;
-var bottleY = 400;
+var bottleX1 = 300;
+var bottleY1 = 350;
+var bottleX2 = 300;
+var bottleY2 = 320;
+var bottleX3 = 250;
+var bottleY3 = 350;
+var bottleX4 = 250;
+var bottleY4 = 320;
 
-var dispenserX = 500;
-var dispenserY = 300;
+var dispenserX = 575;
+var dispenserY = 250;
 
 function preload() {
-  waterBottleImg = loadImage("static/water-bottle.jpeg");
+  // waterBottleImg = loadImage("bottle.png");  // idk why this doesn't work
 }
 
 function setup() {
@@ -27,6 +33,15 @@ function setup() {
   // myCanvas.parent(canvasDiv);
   renderer.parent(canvasDiv);
 
+  waterBottle = new Group();
+  waterBottle1 = createSprite(bottleX1, bottleY1, 25, 50);
+  waterBottle2 = createSprite(bottleX2, bottleY2, 10, 10);
+  waterBottle3 = createSprite(bottleX3, bottleY3, 25, 50);
+  waterBottle4 = createSprite(bottleX4, bottleY4, 10, 10)
+  waterBottle.add(waterBottle1)
+  waterBottle.add(waterBottle2)
+  waterBottle.add(waterBottle3)
+  waterBottle.add(waterBottle4)
 }
 
 function draw() {
@@ -34,13 +49,13 @@ function draw() {
 
   let blue = color(255, 204, 0);
   fill(blue);
-  machine = rect(500, 0, 200, 300, 10); // x-axis, y-axis, width, height, border-radius
-  let white = color(255,255,255)
+  machine = rect(500, 75, 150, 300, 10); // x-axis, y-axis, width, height, border-radius
+  let white = color(255, 255, 255)
   fill(white);
-  theScreen = rect(425, 150, 150, 100, 10)
+  theScreen = rect(525, 100, 100, 100, 10)
   let black = color(0, 0, 0)
   fill(black);
-  receipt = rect(520, 350, 50, 10)
+  receipt = rect(575, 300, 50, 10)
   let yellow = color(100, 100, 100)
   fill(yellow);
   dispenser = ellipse(dispenserX, dispenserY, 50); // x, y, diameter
@@ -49,12 +64,31 @@ function draw() {
   machine.immovable = true;
   dispenser.immovable = true;
 
-  waterBottle = createSprite(bottleX, bottleY, 1, 1);
-  waterBottle.addImage(waterBottleImg);
+  for (var i = 0; i < waterBottle.length; i++) {
+    waterBottle[i].shapeColor = 'lightblue';
+  }
 
-  if (dist(bottleX, bottleY, mouseX, mouseY) < 50 && mouseIsPressed) { // waterBottle
-    waterBottle.remove(waterBottleImg)
-    screenBottle = text("10c", 425,150,10,10)
+  for (var i = 0; i < 2; i++) {
+    waterBottle[i].velocity.x = 2;
+    waterBottle[i].velocity.y = -0.6;
+  }
+
+  if (waterBottle1.position.x == dispenserX+1) {
+    waterBottle1.remove();
+    waterBottle2.remove()
+    text("Bottle value:", 545, 145)
+    text("$0.10", 560, 160)
+  }
+
+  if (waterBottle3.position.x == dispenserX+1) {
+    waterBottle3.remove();
+    waterBottle4.remove();
+    fill(white);
+    rect(575, 310, 50, 50)
+    fill(black);
+    text("receipt", 583, 335)
+    text("$0.20", 585, 350)
+    noLoop();
   }
 
   drawSprites();
