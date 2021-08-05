@@ -9,8 +9,8 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <link type="text/css" href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
-  <link rel="icon" href="{{url_for('static', filename='walmart-logo.png')}}">
+  <link type="text/css" href="main.css" rel="stylesheet">
+  <link rel="icon" href="walmart-logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
 
   <title>Walmart | Hole in the Wall</title>
@@ -24,7 +24,7 @@
 
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-primary">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-          <img id="logo" src="{{url_for('static', filename='walmart-logo.png')}}" alt="" width="30" height="30">
+          <img id="logo" src="walmart-logo.png" alt="" width="30" height="30">
         </a>
 
         <ul class="nav nav-pills">
@@ -109,7 +109,8 @@
               <div class="accordion-body">
                 <strong>Common RVMs accept empty plastic bottles, but other recyclables are known to be accepted.</strong>
                 <p class="card-body">For example, the Netherlands-based grocery store
-                  <a href="https://www.jumbo.com/service/online-bestellen/statiegeld">Jumbo</a> implemented its take on the RVM in nearly all of its 800 stores, with customers exchanging glass bottles as well as batteries and broken lightbulbs for store credit. You can even dispense a beer crate!</p>
+                  <a href="https://www.jumbo.com/service/online-bestellen/statiegeld">Jumbo</a> implemented its take on the RVM in nearly all of its 800 stores, with customers exchanging glass bottles as well as batteries and broken lightbulbs for
+                  store credit. You can even dispense a beer crate!</p>
                 <img class="card-img" src="https://bitterballenbruid.files.wordpress.com/2015/10/statiegeld.jpg">
                 <small><a href="https://bitterballenbruid.com">Photo source</a></small>
               </div>
@@ -124,7 +125,10 @@
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>Yes, but more commonly in Europe.</strong>
-                <p class="card-body">Many grocery stores in Europe have adopted RVMs as a regular part of the store, while in the US, these machines are quite hard to find. Some college campuses, like <a href="https://green.harvard.edu/news/greenbean-recycling-machine-arrives-harvard">Harvard</a>, <a href="https://vending.kennesaw.edu/reverse-vending.php">Kennesaw State University</a>, <a href="https://www.albany.edu/uas/article_reverse_vending.php">University of Albany, SUNY</a>, and <a href='https://www.bentley.edu/news/bentley-enhances-recycling-campus-new-greenbean-machine'>Bentley University</a> have machines available for students to recycle their empty containers, but no nationwide retail store prides themselves in making RVMs available to customers.</p>
+                <p class="card-body">Many grocery stores in Europe have adopted RVMs as a regular part of the store, while in the US, these machines are quite hard to find. Some college campuses, like <a
+                    href="https://green.harvard.edu/news/greenbean-recycling-machine-arrives-harvard">Harvard</a>, <a href="https://vending.kennesaw.edu/reverse-vending.php">Kennesaw State University</a>, <a
+                    href="https://www.albany.edu/uas/article_reverse_vending.php">University of Albany, SUNY</a>, and <a href='https://www.bentley.edu/news/bentley-enhances-recycling-campus-new-greenbean-machine'>Bentley University</a> have machines
+                  available for students to recycle their empty containers, but no nationwide retail store prides themselves in making RVMs available to customers.</p>
               </div>
             </div>
           </div>
@@ -136,8 +140,11 @@
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <p class="card-body">According to the <a href="https://www.unep.org/interactive/beat-plastic-pollution/">UN Environment Programme</a>, 300 million tons of plastic waste - the weight of the entire human population - is produced every year. Plastic pollution is a rampant problem as most of these items never fully disappear. Because plastic has a strong resistance to disintegrating, microplastics find their way into animal products and even our tap water, causing <a href="https://ecologycenter.org/factsheets/adverse-health-effects-of-plastics/">health hazards</a> and eventually reducing our quality of life. Throwing used plastic bottles into waste is part of this problem.</p>
-                <p class="card-body">Zero waste includes reducing plastic waste to zero. Currently, Walmart has a <a href="https://corporate.walmart.com/askwalmart/what-is-walmart-doing-about-plastic-waste">plastic bag/film recycling program</a> in place, but not for plastic bottles. The RVM is an efficient way of ensuring that plastic bottles sold by Walmart are recycled after use.</p>
+                <p class="card-body">According to the <a href="https://www.unep.org/interactive/beat-plastic-pollution/">UN Environment Programme</a>, 300 million tons of plastic waste - the weight of the entire human population - is produced every
+                  year. Plastic pollution is a rampant problem as most of these items never fully disappear. Because plastic has a strong resistance to disintegrating, microplastics find their way into animal products and even our tap water, causing
+                  <a href="https://ecologycenter.org/factsheets/adverse-health-effects-of-plastics/">health hazards</a> and eventually reducing our quality of life. Throwing used plastic bottles into waste is part of this problem.</p>
+                <p class="card-body">Zero waste includes reducing plastic waste to zero. Currently, Walmart has a <a href="https://corporate.walmart.com/askwalmart/what-is-walmart-doing-about-plastic-waste">plastic bag/film recycling program</a> in
+                  place, but not for plastic bottles. The RVM is an efficient way of ensuring that plastic bottles sold by Walmart are recycled after use.</p>
               </div>
             </div>
           </div>
@@ -150,7 +157,8 @@
             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>This depends on local laws.</strong>
-                <p class="card-body"><a href="https://www.ncsl.org/research/environment-and-natural-resources/state-beverage-container-laws.aspx">Ten states and Guam</a> currently have a deposit-refund system, where each beverage container has a deposit amount varying from two cents to 15 cents.</p>
+                <p class="card-body"><a href="https://www.ncsl.org/research/environment-and-natural-resources/state-beverage-container-laws.aspx">Ten states and Guam</a> currently have a deposit-refund system, where each beverage container has a
+                  deposit amount varying from two cents to 15 cents.</p>
               </div>
             </div>
           </div>
@@ -162,7 +170,9 @@
             </h2>
             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <p class="card-body">Walmart would be the first major retailer in the United States to introduce an automatic machine for customers to receive refunds from empty plastic bottles. Implementing RVMs are in line with Walmart's <a href="https://corporate.walmart.com/global-responsibility/sustainability/">Sustainability Goals</a> to "help protect, manage or restore at least 50 million acres of land and 1 million square miles of ocean by 2030" as well as the 2025 goal of zero waste.</p>
+                <p class="card-body">Walmart would be the first major retailer in the United States to introduce an automatic machine for customers to receive refunds from empty plastic bottles. Implementing RVMs are in line with Walmart's <a
+                    href="https://corporate.walmart.com/global-responsibility/sustainability/">Sustainability Goals</a> to "help protect, manage or restore at least 50 million acres of land and 1 million square miles of ocean by 2030" as well as the
+                  2025 goal of zero waste.</p>
               </div>
             </div>
           </div>
@@ -170,10 +180,10 @@
       </div>
       <div class="row">
         <div class="py-5" id="aboutsection">
-        <a id="about" style="text-decoration: none; color: inherit; text-align: center">
-          <h1 class="display-4 fw-normal">About</h1>
-        </a>
-        <p class="px-4 py-4">This website was built by <a href="http://annebelleo.github.io">Annebelle Olminkhof</a> for the 2021 GWC x Walmart coding challenge.</p>
+          <a id="about" style="text-decoration: none; color: inherit; text-align: center">
+            <h1 class="display-4 fw-normal">About</h1>
+          </a>
+          <p class="px-4 py-4">This website was built by <a href="http://annebelleo.github.io">Annebelle Olminkhof</a> for the 2021 GWC x Walmart coding challenge.</p>
         </div>
       </div>
   </main>
@@ -181,12 +191,18 @@
 
   <footer class="footer"></footer>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/8.8.1/firebase-app.js"></script>
 
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/8.8.1/firebase-analytics.js"></script>
 
-
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js" type="text/javascript"></script>
-  <script src="{{ url_for('static', filename='p5.play.js') }}" type="text/javascript"></script>
+  <script src="p5.play.js" type="text/javascript"></script>
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
